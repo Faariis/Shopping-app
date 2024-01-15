@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.76);
+}
+
+#main3-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card-container {
+    background-color: #fff;
+    overflow-y: auto;
+    flex: 1;
+    padding: 0.2cm;
+}
+
+.card h6 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'FuturisticFont', sans-serif;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-col {
+    flex: 1;
+    margin: 0.5%;
+}
+
+.card {
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #333;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgb(0, 0, 0);
+    background-color: #2c3338;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.form-container {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 70%;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.form-container .form-control {
+    height: 30px;
+}
+
+.form-container button {
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #8bbcdf !important;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, text-indent 0.3s ease-in-out;
+    border: none;
+    outline: none !important;
+    font-size: 18px;
+}

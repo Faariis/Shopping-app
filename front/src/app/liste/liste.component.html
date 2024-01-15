@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-GLhlTQ8iKt6Ua9e1aC6JYQp9c72ZZHWNpBquL6GOgGgjRMU/6en8e6Z5BiQOp6z" crossorigin="anonymous">
+<div class="navbar navbar-expand-lg">
+    <a class="navbar-brand">Liste</a>
+    <div class="ml-auto">
+      <a routerLink="/kupac" class="btn btn-primary">Nazad</a>
+    </div>
+</div>
+  
+<div class="container" id="main2-container">
+    <div class="row">
+        <div *ngFor="let shoppingList of shoppingLists" class="ml-4 mt-3 mr-2">
+            <div class="card m-b-30">
+                <div class="card-title align-self-center mb-3">
+                    <h6 class="mb-1 mt-1">{{ shoppingList.listName }}</h6>
+                    <h6 class="mb-1">Kupac: {{ shoppingList.shopperName }}</h6>
+                    <h6>Proizvodi:</h6>
+                    <ul class="mb-1">
+                        <li *ngFor="let item of shoppingList.items" class="mb-2">
+                            <span>{{ item.itemName }}</span>
+                            <button class="custom-button" (click)="deleteItemFromList(shoppingList.listId, item.itemId)">Izbriši</button>
+                        </li>
+                    </ul>
+  
+                    <!-- Add an input for the user to enter the item ID -->
+                    <div class="card1 m-b-30">
+                        <div class="card-title align-self-center mb-3">
+                            <!-- Other card content here -->
+              
+                            <!-- Add an input for the user to enter the item ID -->
+                            <div class="bottom-input-container">
+                                <input type="number" [(ngModel)]="newItemIds[shoppingList.listId]" placeholder="1, 2, 3, 4, 5" class="bottom-input" />
+                            </div>
+                        </div>
+                    </div>
+  
+                    <!-- Add button to add item -->
+                    <button class="btn btn-primary" (click)="addItemToList(shoppingList.listId)">Dodaj</button>
+  
+                    <!-- Button to delete the whole list -->
+                    <div class="text-center mt-4">
+                        <button class="btn btn-danger" (click)="deleteWholeList(shoppingList.listId)">Izbriši listu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Button to delete all shopping lists (conditionally displayed) -->
+    <div class="text-center mt-4" *ngIf="shoppingLists.length > 0">
+        <button class="btn btn-danger" (click)="deleteAllShoppingLists()">Izbriši sve liste!</button>
+    </div>
+    <div class="text-center mt-4" *ngIf="shoppingLists.length === 0">Trenutno nema listi.</div>
+</div>

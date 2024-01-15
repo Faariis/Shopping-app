@@ -1,0 +1,34 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg" style="background-color: #333; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <a class="navbar-brand" style="color:white; font-weight: bold; padding-left: 1cm;">Proizvodi</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            </li>
+        </ul>
+        <a routerLink="/kupac" class="btn btn-primary ml-auto">Kupci</a>
+    </div>
+</nav>
+
+<div class="container" id="main2-container">
+    <div class="row">
+        <div *ngFor="let proizvod of proizvodi" class="mt-3 ml-4">
+            <div class="card m-b-30">
+                <div class="col-6 card-title align-self-center mb-0 text-white mt-5">
+                    <h6>{{proizvod?.name}}</h6>
+                    <h6>Id: {{proizvod?.id}}</h6>
+                    <h6>Kolicina: {{proizvod?.stock_count}}</h6>
+                </div>
+                <div class="card-body">
+                    <div class="float-right btn-group btn-group-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=FuturisticFont&display=swap">
+<nav class="navbar navbar-expand-lg">
+   <a class="navbar-brand" style="color:white; font-weight: bold; padding-left: 1cm;">Kupci</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+      aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+         <li class="nav-item active"></li>
+      </ul>
+      <button routerLink="/kupac/liste" class="btn btn-primary">Liste</button>
+      <button routerLink="/proizvodi" class="btn btn-primary ml-2">Proizvodi</button>
+   </div>
+</nav>
+
+<div id="main3-container">
+   <div class="card-container">
+      <div class="card-row">
+         <div *ngFor="let kupac of kupci" class="card-col">
+            <div class="card m-b-30">
+               <div class="card-title align-self-center mb-0">
+                  <h6>{{kupac?.shopper_name}}</h6>
+                  <h6>Id: {{kupac?.id}}</h6>
+               </div>
+               <div class="card-body"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="form-container">
+      <h2>Kreiraj novu listu</h2>
+      <form #shoppingListForm="ngForm" (ngSubmit)="onSubmit(shoppingListForm)">
+         <div class="form-group">
+            <label for="shopperId">ID:</label>
+            <input type="text" class="form-control" id="shopperId" name="shopperId" placeholder="ID"
+               [(ngModel)]="shopperId" required>
+         </div>
+         <div class="form-group">
+            <label for="listName">Naziv liste:</label>
+            <input type="text" class="form-control" id="listName" name="listName" placeholder="3-20 karaktera"
+               [(ngModel)]="listName" required>
+         </div>
+         <div class="form-group">
+            <label for="itemIds">ID proizvoda (zarezom odvojiti):</label>
+            <input type="text" class="form-control" id="itemIds" name="itemIds" placeholder="1,2,3,4,5"
+               [(ngModel)]="itemIds" required>
+         </div>
+         <button type="submit" class="btn btn-primary">Kreiraj listu proizvoda!</button>
+      </form>
+   </div>
+</div>
