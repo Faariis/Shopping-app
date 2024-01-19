@@ -19,6 +19,12 @@ The logic ensures a product appears in no more than three lists. Additionally, I
 ### Running the Project
 After opening the project, execute 'npm install' in the terminal. Once dependencies are installed, run 'npm start' for Node and 'ng serve' for Angular. Find the database script in the folder and refer to the .env file for configuration details.
 
+### Images
+
+![Screenshot (272)](https://github.com/Faariis/Shopping-app/assets/84626163/d06821da-7d13-40e8-adb5-22d212b2485a)
+![Screenshot (273)](https://github.com/Faariis/Shopping-app/assets/84626163/a54b4d85-735c-41aa-90ae-243688b5084a)
+![Screenshot (274)](https://github.com/Faariis/Shopping-app/assets/84626163/028a672c-3163-4377-b265-42fef2a9c2be)
+![Screenshot (275)](https://github.com/Faariis/Shopping-app/assets/84626163/bd48e457-ed78-4b18-8f95-d3b63a3b9394)
 
 
 
